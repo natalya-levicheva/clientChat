@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_back_auth"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:background="@drawable/button"
+        android:onClick="onClick"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+    <!-- app:layout_constraintRight_toRightOf="parent" -->
+
+
+    <TextView
+        android:id="@+id/view_auth"
+        android:text="@string/login"
+        android:textColor="@color/blue_main"
+        android:textSize="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_bias="0.8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_back_auth"
+        app:layout_constraintBottom_toTopOf="@id/liner"/>
+
+    <LinearLayout
+        android:id="@+id/liner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_back_auth"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/view_username_auth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/username"
+            android:textSize="16dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/blue"/>
+
+        <EditText
+            android:id="@+id/edit_username_auth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:layout_marginVertical="30dp"
+            android:textColor="@color/main"
+            android:background="@drawable/edittext_auth_reg"/>
+
+        <TextView
+            android:id="@+id/view_password_auth"
+            android:textSize="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/password"
+            android:textColor="@color/blue"/>
+
+        <EditText
+            android:id="@+id/edit_password_auth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginVertical="20dp"
+            android:inputType="textPassword"
+            android:textColor="@color/main"
+            android:background="@drawable/edittext_auth_reg"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_registration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:text="@string/button_login"
+            android:textColorHint="@color/white"
+            android:layout_marginHorizontal="60dp"
+            android:textColor="@color/back"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
